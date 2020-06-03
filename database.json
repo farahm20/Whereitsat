@@ -1,0 +1,238 @@
+{
+  "Events": [
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 294,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 91,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 3,
+      "name": "Kajsas kör",
+      "place": "Götaplatsen",
+      "time": "15:00 - 16:00",
+      "price": 99,
+      "tickets": 996,
+      "ticketId": "MBZ56",
+      "date": "10 APR"
+    },
+    {
+      "id": 4,
+      "name": "Klubb Untz",
+      "place": "Din favoritkällare",
+      "time": "22:00 - du tröttnar",
+      "price": 150,
+      "tickets": 116,
+      "ticketId": "WYN719",
+      "date": "17 APR"
+    }
+  ],
+  "Orders": [
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
+      "ticketId": "GFI51",
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 4,
+      "name": "Klubb Untz",
+      "place": "Din favoritkällare",
+      "time": "22:00 - du tröttnar",
+      "price": 150,
+      "tickets": 116,
+      "ticketId": "WYN719",
+      "date": "17 APR"
+    },
+    {
+      "id": 3,
+      "name": "Kajsas kör",
+      "place": "Götaplatsen",
+      "time": "15:00 - 16:00",
+      "price": 99,
+      "tickets": 996,
+      "ticketId": "MBZ56",
+      "date": "10 APR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 4,
+      "name": "Klubb Untz",
+      "place": "Din favoritkällare",
+      "time": "22:00 - du tröttnar",
+      "price": 150,
+      "tickets": 116,
+      "ticketId": "WYN719",
+      "date": "17 APR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 294,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 91,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    }
+  ],
+  "Tickets": [
+    {
+      "id": 3,
+      "name": "Kajsas kör",
+      "place": "Götaplatsen",
+      "time": "15:00 - 16:00",
+      "price": 99,
+      "tickets": 997,
+      "ticketId": "MBZ56",
+      "date": "10 APR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 95,
+      "ticketId": "HBP833",
+      "date": "29 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 95,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 95,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 4,
+      "name": "Klubb Untz",
+      "place": "Din favoritkällare",
+      "time": "22:00 - du tröttnar",
+      "price": 150,
+      "tickets": 118,
+      "ticketId": "PYY846",
+      "date": "17 APR"
+    },
+    {
+      "id": 4,
+      "name": "Klubb Untz",
+      "place": "Din favoritkällare",
+      "time": "22:00 - du tröttnar",
+      "price": 150,
+      "tickets": 118,
+      "ticketId": "WYN719",
+      "date": "17 APR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
+      "ticketId": "GFI51",
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    }
+  ]
+}
