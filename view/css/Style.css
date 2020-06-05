@@ -8,10 +8,24 @@ body{
     background: #E5E5E5;
 }
 
+.yellowWrapper {
+    
+    position: relative;
+    
+    background: #F39440;
+    width: 394px;
+    height: 950px;
+    font-size: 20px;
+    text-align: center;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+}
+
 .wrapper {
     background-color: #231F42;
     width: 394px;
-    height: 834px;
+    height: 950px;
     position: relative;
     font-size: 20px;
     text-align: center;
@@ -20,22 +34,26 @@ body{
     right: 30%;
 }
 
+.events {
+    top: 50px;
+    position: relative;
+}
 .mainHeading {
     position: relative;
-    /* width: 311px; */
-    /* height: 45px; */
-    /* left: 32px; */
-    top: 34px; 
+    width: 311px;
+    height: 45px;
+    left: 32px;
+    top: 34px;
     /* display: flex; */
     align-items: center;
     text-align: center;
     font-family: Sansita One;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 41px;
+    line-height: 50px;
     color: #F56B9A;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .eventText {
@@ -448,4 +466,237 @@ transform: rotate(-90deg);
     text-align: center;
     letter-spacing: 0.3em;
     color: rgba(0, 0, 0, 0.4);
+}
+
+.loginPageButton {
+       /* right: 44px; */
+       position: relative;
+       left: 154px;
+       top: 4px;
+       background-color: #272250;
+       color: white;
+       border: white;
+       width: 75px;
+       padding: 1px 0px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 15px;
+       margin: 1px 0;
+       transition-duration: 0.4s;
+       cursor: pointer;
+}
+
+.eventNameButton {
+    border: none;
+    background-color: #231F42;
+    color: #FFFFFF;
+    /* font-size: 25px; */
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 69px;
+    left: 100px;
+    top: 53px;
+}
+
+.yellowh1 {
+    position: absolute;
+    width: 200px;
+    height: 52px;
+    left: 28px;
+    top: 195px;
+    font-family: Sansita One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+
+    color: #000000;
+}
+
+.yellowh2 {
+    position: absolute;
+width: 200px;
+height: 35px;
+left: 111px;
+top: 308px;
+
+font-family: Fira Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 23px;
+line-height: 26px;
+/*display: flex;*/
+align-items: center;
+text-align: center;
+letter-spacing: 0.3em;
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+.choice button {
+    position: absolute;
+width: 310px;
+height: 63px;
+left: 41px;
+
+border: 2px solid #231F42;
+box-sizing: border-box;
+border-radius: 3px;
+}
+
+.verifyButton {
+    top: 500px;
+}
+
+.staffButton {
+    top: 400px;
+}
+
+button a {
+        /* position: absolute; */
+    /* width: 202px; */
+    /* height: 30px; */
+    /* left: 86px; */
+    /* top: 342px; */
+    font-family: Fira Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
+    letter-spacing: 0.3em;
+    color: #090911;
+    text-decoration: none;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    
+  }
+
+  #username, #password, #ticketNumber{
+    position: relative;
+    top: 400px;
+    left: 40px;
+    /* padding: 0; */
+    /* margin: 0; */
+    border: 2px solid #231F42;
+    background-color: #F39440;
+    width: 310px;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Fira Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.3em;
+    
+    
+  }
+  
+  #loginButton, #verifyButton{
+    position: relative;
+    top: 437px;
+    left: 0px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #231F42;
+    background-color: #231F42;
+    color: #ffffff;
+    width: 310px;
+    height: 60px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    /* text-align: center; */
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .admin-wrapper {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    background: #231F42;
+  }
+
+  .admin-leftBox {
+    position: absolute;
+    width: 732px;
+    height: 313px;
+    left: 130px;
+    top: 202px;
+    
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  .admin-logo {
+    position: absolute;
+    width: 200px;
+    height: 69px;
+    left: 45px;
+    top: 45px;
+  }
+
+  .admin-rightBox {
+    position: absolute;
+    width: 432px;
+    height: 378px;
+    left: 878px;
+    top: 202px;
+    
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .adminh1 {
+    position: relative;
+    width: 140px;
+    height: 30px;
+    /* left: 894px; */
+    top: 0;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    color: #F56B9A;
+  }
+
+.createEventButton {
+  position: relative;
+  width: 260px;
+  height: 30px;
+  left: 0px;
+  top: 342px;
+  background: #F56B9A;
+  border-radius: 3px;
 }

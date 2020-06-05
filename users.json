@@ -1,5 +1,16 @@
 {
-    "users": [
-
-    ]
-  }
+  "users": [
+    {
+      "uuid": "15c902d4-d882-4b38-a876-6c7e4f1ea0ef",
+      "username": "staff",
+      "password": "$2b$10$ooRF6ESQDsmVhPnhRJ0I6.gMiReX1VYxVkoMTkBT/pVfGwHU7c1wC",
+      "role": "user"
+    },
+    {
+      "uuid": "ed5f9b90-a64a-4c1b-8f95-b300fb762b61",
+      "username": "admin",
+      "password": "$2b$10$aYg6442lekjJIX6LC6paS..IyA9yBep18igvPIQ1e42uWwerUCKNi",
+      "role": "user"
+    }
+  ]
+}

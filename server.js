@@ -22,8 +22,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/api/account', accountRouter);
-
+app.use('/whereitsat/account', accountRouter);
+app.use('/whereitsat/create', createRouter);
+app.use('/whereitsat/account', accountRouter);
 
 
 app.listen(8000, () => {

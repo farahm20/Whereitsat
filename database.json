@@ -6,7 +6,7 @@
       "place": "Kjell härnqvistsalen",
       "time": "19:00 - 21:00",
       "price": 350,
-      "tickets": 294,
+      "tickets": 288,
       "ticketId": 0,
       "date": "21 MAR"
     },
@@ -16,7 +16,7 @@
       "place": "Pubelipuben",
       "time": "22:00 - 00:00",
       "price": 110,
-      "tickets": 91,
+      "tickets": 90,
       "ticketId": "FFQ828",
       "date": "29 MAR"
     },
@@ -141,6 +141,76 @@
       "tickets": 91,
       "ticketId": "FFQ828",
       "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 90,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 288,
+      "ticketId": 0,
+      "date": "21 MAR"
     }
   ],
   "Tickets": [
@@ -161,7 +231,7 @@
       "time": "22:00 - 00:00",
       "price": 110,
       "tickets": 95,
-      "ticketId": "HBP833",
+      "ticketId": "KSO381",
       "date": "29 MAR"
     },
     {
@@ -221,6 +291,26 @@
       "time": "19:00 - 21:00",
       "price": 350,
       "tickets": 295,
+      "ticketId": "WLP965",
+      "date": "21 MAR"
+    },
+    {
+      "id": 2,
+      "name": "Pelle trubadur",
+      "place": "Pubelipuben",
+      "time": "22:00 - 00:00",
+      "price": 110,
+      "tickets": 92,
+      "ticketId": "FFQ828",
+      "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
       "ticketId": "GFI51",
       "date": "21 MAR"
     },
@@ -233,6 +323,26 @@
       "tickets": 92,
       "ticketId": "FFQ828",
       "date": "29 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
+      "ticketId": "GFI51",
+      "date": "21 MAR"
+    },
+    {
+      "id": 1,
+      "name": "Lasse-Stefanz",
+      "place": "Kjell härnqvistsalen",
+      "time": "19:00 - 21:00",
+      "price": 350,
+      "tickets": 295,
+      "ticketId": "GFI51",
+      "date": "21 MAR"
     }
   ]
 }

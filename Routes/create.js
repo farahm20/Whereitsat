@@ -16,7 +16,7 @@ const { hashPassword } = require('../models/hashPassword');
 */
 
 //Endpoint för skapa konto
-router.post('/whereitsat/', async (req, res) => {
+router.post('/', async (req, res) => {
     let body = req.body;
 
     let resObj = {

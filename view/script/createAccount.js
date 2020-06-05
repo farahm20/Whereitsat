@@ -27,9 +27,14 @@ async function createAccount(username, password) {
     }
 }
 
+function checkUserRole () {
+    
+}
+
 buttonElem.addEventListener('click', () => {
     const username = inputUser.value;
     const password = inputPass.value;
 
     createAccount(username, password);
 });
+
