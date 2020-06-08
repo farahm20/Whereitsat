@@ -1,5 +1,7 @@
+const {Router} = require('express');
+const router = new Router();
 const db = require('../models/database-operations');
-const { initiateDatabase, createEvent } = require('../models/database-operations');
+const { initiateDatabase, createEvent, removeTicket } = require('../models/database-operations');
 
 
 module.exports = (app) => {
@@ -11,10 +13,9 @@ module.exports = (app) => {
     //--------------------------------------------POST: add in Tickets ------------------------------------------- */
     //http://localhost:8000/whereitsat/addEvent/?id=1
     app.post('/whereitsat/addEvent', (req, res) => {
-        const searchTerm = req.query.id;
+        const searchTerm = req.query;
+        console.log('In endpoints for admin: ', searchTerm);
 
-        console.log(req.url);
-        console.log(searchTerm);
         res.send('in endpoints file..add event....');
         let obj = db.addItemInEvents(searchTerm);
         /*      let obj = {
@@ -56,22 +57,20 @@ module.exports = (app) => {
     })
 
     //-------------------------------------------DELETE: remove a specific product ------------------------------------------- */
-    //http://localhost:8000/whereitsat/removeItem/?id=1
-
-    /*
-       app.delete('/whereitsat/removeItem', (req, res) => {
-           const itemToDelete = req.query.id;
-           console.log(req.url);
-           console.log(itemToDelete);
+    // `http://localhost:8000/whereitsat/removeTicket/?ticketId=${ticketNum}`
+       app.delete('/whereitsat/removeTicket', (req, res) => {
+           const itemToDelete = req.query.ticketId;
+           console.log("From req.query: ", req.query.ticketId);
+       //    console.log(itemToDelete);
        //    res.send('At item to delete from cart endpoint....');
-           db.deleteItemFromCart(itemToDelete);
+           db.removeTicket(itemToDelete);
            let obj = {
                message: 'Removing item from cart....'
             }
             res.send(JSON.stringify(obj));
             console.log(obj);
        })
-   */
+   
 
     //-------------------------------------------DELETE: delete teh whole cart ------------------------------------------- */
     //http://localhost:8000/TechShop/deleteAllCart
@@ -115,11 +114,11 @@ module.exports = (app) => {
     });
 
     //http://localhost:8000/whereitsat/createEvent
-    app.post('/whereitsat/createEvent', async (req, res) => {
-        initiateDatabase();
-        console.log("In the endpoints: ", req.query.id);
+    app.post('/whereitsat/createEvent/', async (req, res) => {
+    //    initiateDatabase();
+        console.log("In the endpoints: ", req.body);
         const event = req.body;
-        console.log("In the endpoints: ", event);
+    //    console.log("In the endpoints: ", req);
         const createdEvent = await createEvent(event);
         console.log("Created Event: ", createdEvent);
 

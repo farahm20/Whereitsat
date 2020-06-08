@@ -61,17 +61,16 @@ function displayEvents(events) {
 }//end of display orders
 async function createEventinDB(obj) {
     console.log("In createevent in DB function ", obj);
+    const url = 'http://localhost:8000/whereitsat/createEvent/';
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(obj),
+        headers: { "Content-Type": "application/json" }
+    });
 
-//    const url = 'http://localhost:8000/whereitsat/createEvent';
-
-        let url = `http://localhost:8000/whereitsat/createEvent/?Events=${obj}`;
-        let response = await fetch (url, { method: 'POST' });
-        let data = await response.json();
- 
-  
     getEvent();
-
-    return  data;
+    let data = await response.json();
+    return data;
 }
 
 /*

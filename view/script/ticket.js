@@ -154,3 +154,4 @@ function displayTicket(tickets) {
         containerElem.appendChild(ticketCard);        
     }
 }//end of display orders
+

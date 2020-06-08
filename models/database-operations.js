@@ -56,6 +56,13 @@ function findItemInOrders(itemToFind){
     return findInOrders;
 }
 
+//-------------------------------------------FIND ITEM IN TICKETS------------------------------------------- */
+function findItemInTickets(itemToFind){
+    const findInTickets = database.get('Tickets').find({ ticketId: itemToFind}).value();
+    console.log(findInTickets);
+    return findInTickets;
+}
+
 //-------------------------------------------GENERATE TICKET NUMBER------------------------------------------- */
 function generateTicketNumber() {
     let alphaNumeric = "";
@@ -152,27 +159,27 @@ exports.addItemInOrders = (searchTerm) => {
     
     return alertMessage;
 } 
-//-------------------------------------------DELETE ITEM FROM CART------------------------------------------- */
-/* 
-exports.deleteItemFromCart = (itemToDelete) => {
-    let removeItem= parseInt(itemToDelete);
+//-------------------------------------------DELETE ITEM FROM Tickets------------------------------------------- */
+
+exports.removeTicket = (itemToDelete) => {
+    let removeItem = itemToDelete;
     //console.log(removeItem);
 
-    const checkInCartItem = findItemInCart(removeItem);//find item in cart
-    //console.log(checkInCartItem);
+    const checkInTickets = findItemInTickets(removeItem);//find item in Tickets
+    //console.log(checkInTickets);
 
-    if(checkInCartItem !== undefined){
-        database.get('Cart').remove(checkInCartItem).write();
+    if(checkInTickets !== undefined){
+        database.get('Tickets').remove(checkInTickets).write();
         alertMessage = {
-            status : 'SUCCESS', message : "Item removed from Cart" };
+            status : 'SUCCESS', message : "Item removed from Tickets" };
             console.log(alertMessage);
     }else{
         alertMessage = {
-            status : 'ERROR', message : "Invalid request- Item not found in cart" };
+            status : 'ERROR', message : "Invalid request- Item not found in Tickets" };
         console.log(alertMessage);
     }    
 }
-
+/* 
 exports.deleteCart = (allCartItems) => {
     database.get('Cart').remove(allCartItems).write();
     console.log('Cart deleted succesfully');
