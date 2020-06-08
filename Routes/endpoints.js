@@ -14,7 +14,7 @@ module.exports = (app) => {
     //http://localhost:8000/whereitsat/addEvent/?id=1
     app.post('/whereitsat/addEvent', (req, res) => {
         const searchTerm = req.query;
-        console.log('In endpoints for admin: ', searchTerm);
+    //    console.log('In endpoints for admin: ', searchTerm);
 
         res.send('in endpoints file..add event....');
         let obj = db.addItemInEvents(searchTerm);
@@ -65,28 +65,15 @@ module.exports = (app) => {
        //    res.send('At item to delete from cart endpoint....');
            db.removeTicket(itemToDelete);
            let obj = {
-               message: 'Removing item from cart....'
+               message: 'Removing verified ticket....'
             }
             res.send(JSON.stringify(obj));
             console.log(obj);
        })
    
 
-    //-------------------------------------------DELETE: delete teh whole cart ------------------------------------------- */
-    //http://localhost:8000/TechShop/deleteAllCart
-
-    /*
-        app.delete('/TechShop/deleteAllCart/', (req, res) => {
-            let allCartItems = req.params.id;
-            console.log('At Cart delete endpoint....');
-            console.log(allCartItems);
-            db.deleteCart(allCartItems);
-            res.send(allCartItems);
-        });
-    */
-
-    //------------------------------------------- GET: get all of the products ------------------------------------------- */
-    //http://localhost:8000/TechShop/getEvents
+    //------------------------------------------- GET: get all of the events ------------------------------------------- */
+    //http://localhost:8000/whereitsat/getEvents
     app.get('/whereitsat/getEvents', (req, res) => {
 
         let allEvents = db.getEvents();
@@ -95,7 +82,7 @@ module.exports = (app) => {
         console.log('At get Events endpoint....');
     });
 
-    //-------------------------------------------GET: get all Cart items ------------------------------------------- */
+    //-------------------------------------------GET: get all orders ------------------------------------------- */
     //http://localhost:8000/whereitsat/getOrders
     app.get('/whereitsat/getOrders', (req, res) => {
         let allOrders = db.getOrders();
@@ -113,15 +100,16 @@ module.exports = (app) => {
         console.log('At get Tickets endpoint....');
     });
 
+
+    //-------------------------------------------POST: creating a new event ------------------------------------------- */
     //http://localhost:8000/whereitsat/create/createEvent
     app.post('/whereitsat/create/createEvent', async (req, res) => {
     //    initiateDatabase();
-        console.log("In the endpoints: ", req.body);
+    //    console.log("In the endpoints: ", req.body);
         const event = req.body;
     //    console.log("In the endpoints: ", req);
         const createdEvent = await createEvent(event);
-        console.log("Created Event: ", createdEvent);
-
+    //    console.log("Created Event: ", createdEvent);
 
         let resObj = {
             id: createdEvent.id,

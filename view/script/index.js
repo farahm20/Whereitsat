@@ -99,7 +99,7 @@ function displayEvents(events) {
                 if (checkEventId === prodId) {
                     console.log("Item for this event already is already ordered");
                     ticketCount = order.tickets;
-                    console.log("Getting the Tickets number: ", ticketCount);
+                //    console.log("Getting the Tickets number: ", ticketCount);
                 //    eventName.innerHTML = "ALREADY ORDERED";
                 //    eventName.disabled = true;
                 }

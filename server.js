@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/whereitsat/account', accountRouter);
+//app.use('/whereitsat/account', accountRouter);
 app.use('/whereitsat/create', createRouter);
 app.use('/whereitsat/auth', loginRouter);
 //app.use('/whereitsat', adminRouter);
