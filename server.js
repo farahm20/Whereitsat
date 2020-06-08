@@ -9,7 +9,7 @@ const accountRouter = require('./routes/account');
 
 const app = express();
 
-const database = require('./Routes/database-operations');
+const database = require('./models/database-operations');
 const endpoints = require('./Routes/endpoints');
 
 

@@ -11,7 +11,6 @@ exports.initiateDatabase = () => {
         database.defaults({ Events: [] }).write();
     }
 };
-
 exports.getEvents = () => {
     return database.get('Events').value();
 }
@@ -24,6 +23,30 @@ exports.getTickets = () => {
     return database.get('Tickets').value();
 }
 
+exports.createEvent = (event) => {
+  //  console.log("in database operations, event recieved from admin.js: " + event);
+    let dbEvents = database.get('Events').value();
+    let eventsLength = dbEvents.length; 
+    console.log("in database operations, event length " + eventsLength);
+    eventsLength = eventsLength + 1;
+
+    database.get('Events').push({ 
+        id: eventsLength,
+        name: event.name, 
+        place: event.place, 
+        timeFrom: event.timeFrom,
+        timeTill: event.timeTill,
+        price: event.price, 
+        tickets: 0, 
+        totalTicket: parseInt(event.totalTicket),
+        date: events.date }).write();
+
+      
+
+        const eventCreated = database.get('Events').find({ id: event.id }).value();
+        console.log(" In database operations: ", eventCreated);
+        return eventCreated;
+  }
  
 //-------------------------------------------FIND ITEM IN EVENTS------------------------------------------- */
 //This function is only used in the functions.js. So no need to export it.
@@ -47,7 +70,24 @@ function generateTicketNumber() {
     console.log(alphaNumeric);
     return finalTicketNumber;
 }
+//-------------------------------------------ADD ITEM TO Events------------------------------------------- */
+/*
+exports.addItemInEvents = (index ) => {
+    let itemtoAdd = parseInt(index);
+    console.log('add Item In Events: ', itemtoAdd);
 
+    return database.get('Events').push({ 
+        id: 0,
+        name: event.name, 
+        place: event.place, 
+        timeFrom: event.timeFrom,
+        timeTill: event.timeTill,
+        price: event.price, 
+        tickets: 0, 
+        totalTicket: parseInt(event.totalTicket),
+        date: events.date 
+        }).write();
+} */
 //-------------------------------------------ADD ITEM TO Orders------------------------------------------- */
 exports.addItemInTickets = (index ) => {
     let itemtoAdd = parseInt(index);

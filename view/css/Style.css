@@ -94,7 +94,7 @@ body{
     width: 109px;
     height: 27px;
     /* left: 232px; */
-    top: 108px;
+    top: 73px;
     font-family: Fira Sans;
     font-style: normal;
     /* font-weight: bold; */
@@ -115,6 +115,28 @@ body{
     /* font-size: 14px; */
     /* line-height: 17px; */
     color: #D0D0D0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eventTime {
+    position: absolute;
+    width: 140px;
+    height: 27px;
+    left: 6px;
+    top: 60px;
+    display: flex;
+    flex-direction: row;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D0D0D0;
+}
+
+.eventPlace {
+    position: relative;
+    left: 6px;
 }
 
 .paragraph {
@@ -139,7 +161,7 @@ color: rgba(255, 255, 255, 0.8);
 position: absolute;
 width: 281px;
 height: 43px;
-left: 92px;
+left: 83px;
 top: 189px;
 
 font-family: Sansita One;
@@ -159,14 +181,14 @@ color: #F56B9A;
     width: 284px;
     height: 25px;
     left: 100px;
-    top: 234px;
+    top: 237px;
 }
 
 .orderTime {
     width: 284px;
     height: 25px;
     left: 175px;
-    top: 234px;
+    top: 255px;
 }
 
 .orderDate, .orderTime {
@@ -300,7 +322,7 @@ border-radius: 3px;
     position: absolute;
     width: 84px;
     height: 23px;
-    left: 15px;
+    left: 5px;
     top: 20px;
     font-family: Fira Sans;
     font-style: normal;
@@ -454,7 +476,7 @@ transform: rotate(-90deg);
     position: absolute;
     width: 311px;
     height: 28px;
-    left: 118px;
+    left: 50px;
     top: 83px;
     font-family: Fira Sans;
     font-style: normal;
@@ -466,6 +488,66 @@ transform: rotate(-90deg);
     text-align: center;
     letter-spacing: 0.3em;
     color: rgba(0, 0, 0, 0.4);
+}
+
+.timeFromTitle {
+    position: absolute;
+    width: 56px;
+    height: 29px;
+    left: 128px;
+    top: -8px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.timeTillTitle {
+    position: absolute;
+    width: 56px;
+    height: 29px;
+    left: 228px;
+    top: -8px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.ticketFromTime {
+    position: absolute;
+    width: 84px;
+    height: 23px;
+    left: 107px;
+    top: 20px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.ticketTillTime {
+    position: absolute;
+    width: 84px;
+    height: 23px;
+    left: 207px;
+    top: 20px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .loginPageButton {
@@ -678,8 +760,8 @@ button a {
   .adminh1 {
     position: relative;
     width: 140px;
-    height: 30px;
-    /* left: 894px; */
+    height: 0px;
+    left: 18px;
     top: 0;
     font-family: Fira Sans;
     font-style: normal;
@@ -699,4 +781,118 @@ button a {
   top: 342px;
   background: #F56B9A;
   border-radius: 3px;
+}
+
+.adminEventForm{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 674px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.adminEventCard {
+    display: grid;
+    grid-template-columns: 24% 30% 30% 20%;
+    grid-template-rows: auto;
+  
+    grid-template-rows: 37px;
+
+}
+.allAdminEvents {
+    position: relative;
+    top: 31px;
+}
+
+.adminEventName{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.adminEventPlace, .adminEventPlace, .eventTotalTickets, .eventTicketSold {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.adminEventForm h1 {
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #F56B9A;
+}
+
+.inputForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+}
+
+input {
+    background-color: #19162e;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    width: 400px;
+    height: 40px;
+    margin-bottom: 15px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 18px;
+    margin-left: 16px;
+}
+
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+}
+
+.p-submit {
+    width: 190px;
+    height: 40px;
+    margin: 0px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+.fromTime, .tillTime, .totalTickets, .price, .addEventButton {
+    width: 190px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.addEventButton {
+    background-color: #F56B9A;
+    margin-top: -10px;
+    margin-left: 17px;
 }

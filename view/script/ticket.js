@@ -71,13 +71,31 @@ function displayTicket(tickets) {
         let timeSection = document.createElement('section');
         timeSection.classList.add("timeSection");
 
-        let timeTitle = document.createElement("p")
+        //for time
+        let articleTime = document.createElement('article');
+        articleTime.classList.add("ticketTime");
+  
+        let timeFromTitle = document.createElement("p")
+        timeFromTitle.classList.add("timeFromTitle")
+        timeFromTitle.innerHTML = "FROM";
+        let ticketFromTime = document.createElement("h3");
+        ticketFromTime.classList.add("ticketFromTime");
+        ticketFromTime.innerText = ticket.timeFrom;
+
+        let timeTillTitle = document.createElement("p")
+        timeTillTitle.classList.add("timeTillTitle")
+        timeTillTitle.innerHTML = "TILL";
+        let ticketTillTime = document.createElement("h3");
+        ticketTillTime.classList.add("ticketTillTime");
+        ticketTillTime.innerText = ticket.timeTill;
+        
+/*        let timeTitle = document.createElement("p")
         timeTitle.classList.add("timeTitle")
         timeTitle.innerHTML = "FROM - TO";
 
         let ticketTime = document.createElement("h3");
         ticketTime.classList.add("ticketTime");
-        ticketTime.innerText = ticket.time;
+        ticketTime.innerText = ticket.time;*/
         
         //displaying ticket date
         let dateSection = document.createElement('section');
@@ -101,7 +119,7 @@ function displayTicket(tickets) {
 
         let ticketNumber = document.createElement("p");
         ticketNumber.classList.add("ticketNumber");
-        ticketNumber.innerHTML = ticket.ticketId;  
+        ticketNumber.innerHTML = "Ticket Number: " + ticket.ticketId;  
         
         nameSection.appendChild(nameTitle);
         nameSection.appendChild(ticketName);
@@ -114,13 +132,11 @@ function displayTicket(tickets) {
         dateSection.appendChild(dateTitle);
         dateSection.appendChild(ticketDate);
         ticketCard.appendChild(dateSection);
-        
-        timeSection.appendChild(timeTitle);
-        timeSection.appendChild(ticketTime);
-        ticketCard.appendChild(timeSection);
-        
-        timeSection.appendChild(timeTitle);
-        timeSection.appendChild(ticketTime);
+
+        timeSection.appendChild(timeFromTitle);
+        timeSection.appendChild(timeTillTitle);
+        timeSection.appendChild(ticketFromTime);
+        timeSection.appendChild(ticketTillTime);
         ticketCard.appendChild(timeSection);
         
         barCodeSection.appendChild(barCodeImage);

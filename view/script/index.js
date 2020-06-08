@@ -55,10 +55,18 @@ function displayEvents(events) {
         eventPlace.classList.add("eventPlace");
         eventPlace.innerText = event.place;
         
-        //displaying Event time
-        let eventTime = document.createElement("h3");
-        eventTime.classList.add("eventTime");
-        eventTime.innerText = event.time;
+        //for time
+        let articleTime = document.createElement('article');
+        articleTime.classList.add("eventTime");
+        //displaying Event from time
+        let eventFromTime = document.createElement("h3");
+        eventFromTime.classList.add("eventFromTime");
+        eventFromTime.innerText = event.timeFrom + " - ";
+
+        //displaying Event till time
+        let eventTillTime = document.createElement("h3");
+        eventTillTime.classList.add("eventTillTime");
+        eventTillTime.innerText = " " + event.timeTill;
         
         //displaying Event price
         let eventPrice = document.createElement("p");
@@ -89,7 +97,7 @@ function displayEvents(events) {
                 let prodId = parseInt(event.id);
 
                 if (checkEventId === prodId) {
-                    console.log("item already in cart");
+                    console.log("Item for this event already is already ordered");
                     ticketCount = order.tickets;
                     console.log("Getting the Tickets number: ", ticketCount);
                 //    eventName.innerHTML = "ALREADY ORDERED";
@@ -100,7 +108,10 @@ function displayEvents(events) {
 
         article.appendChild(eventName);
         article.appendChild(eventPlace);
-        article.appendChild(eventTime);
+        articleTime.appendChild(eventFromTime);
+        articleTime.appendChild(eventTillTime);
+        article.appendChild(articleTime);
+
         
         eventCard.appendChild(eventDate);
         eventCard.appendChild(article);

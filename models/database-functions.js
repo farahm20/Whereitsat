@@ -15,5 +15,5 @@ module.exports = {
     
     async addUser(uuid, user, pass) {
         return await database.get('users').push({ uuid: uuid, username: user, password: pass, role: 'user' }).write();
-    }
+    },
 }

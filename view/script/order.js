@@ -52,9 +52,18 @@ function displayOrder(orders) {
         orderPlace.innerText = order.place;
         
         //displaying order time
-        let orderTime = document.createElement("h3");
-        orderTime.classList.add("orderTime");
-        orderTime.innerText = order.time;
+        //for time
+        let articleTime = document.createElement('article');
+        articleTime.classList.add("orderTime");
+        //displaying Event from time
+        let orderFromTime = document.createElement("h3");
+        orderFromTime.classList.add("orderFromTime");
+        orderFromTime.innerText = order.timeFrom + " - ";
+
+        //displaying Event till time
+        let orderTillTime = document.createElement("h3");
+        orderTillTime.classList.add("orderTillTime");
+        orderTillTime.innerText = " " + order.timeTill;
         
         //displaying order price
         let orderPrice = document.createElement("p");
@@ -86,7 +95,9 @@ function displayOrder(orders) {
         orderCard.appendChild(article);
 
         orderCard.appendChild(orderDate);
-        orderCard.appendChild(orderTime);
+        articleTime.appendChild(orderFromTime);
+        articleTime.appendChild(orderTillTime);
+        orderCard.appendChild(articleTime);
         
         orderCard.appendChild(orderPlace);
         orderCard.appendChild(orderPrice);
