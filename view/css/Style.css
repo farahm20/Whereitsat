@@ -5,7 +5,8 @@
 body{
     margin: 0;
     padding: 0;
-    background: #E5E5E5;
+    background: #231F42;
+    /* #E5E5E5;*/
 }
 
 .yellowWrapper {
@@ -25,7 +26,7 @@ body{
 .wrapper {
     background-color: #231F42;
     width: 394px;
-    height: 950px;
+    height: max-content;
     position: relative;
     font-size: 20px;
     text-align: center;
@@ -699,7 +700,7 @@ button a {
   #loginButton, #verifyButton{
     position: relative;
     top: 437px;
-    left: 0px;
+    left: 11px;
     padding: 0;
     margin: 0;
     border: 2px solid #231F42;
@@ -713,6 +714,24 @@ button a {
     font-size: 20px;
     line-height: 26px;
     /* text-align: center; */
+  }
+
+  .logoutButton {
+    position: relative;
+    top: 500px;
+    left: 11px;
+     padding: 0;
+    margin: 0;
+    border: 2px solid #231F42;
+    background-color: #231F42;
+    color: #ffffff;
+    width: 310px;
+    height: 60px;
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .hide{

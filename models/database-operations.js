@@ -39,7 +39,7 @@ exports.createEvent = (event) => {
         price: event.price, 
         tickets: 0, 
         totalTicket: parseInt(event.totalTicket),
-        date: events.date }).write();
+        date: event.date }).write();
 
       
 
@@ -125,7 +125,7 @@ exports.addItemInOrders = (searchTerm) => {
 
     /* DISPLAY: error message if you try to add a product that does not exist.*/
     const matchProduct = database.get('Events').find({ id: itemtoAdd }).value();
-    let ticketIndexToChange = database.get('Events').filter({ id: itemtoAdd }).map('tickets').value();
+    let ticketIndexToChange = database.get('Events').filter({ id: itemtoAdd }).map('totalTicket').value();
     ticketIndexToChange = parseInt(ticketIndexToChange);
     ticketIndexToChange = ticketIndexToChange - 1;
     

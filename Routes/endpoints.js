@@ -113,8 +113,8 @@ module.exports = (app) => {
         console.log('At get Tickets endpoint....');
     });
 
-    //http://localhost:8000/whereitsat/createEvent
-    app.post('/whereitsat/createEvent/', async (req, res) => {
+    //http://localhost:8000/whereitsat/create/createEvent
+    app.post('/whereitsat/create/createEvent', async (req, res) => {
     //    initiateDatabase();
         console.log("In the endpoints: ", req.body);
         const event = req.body;

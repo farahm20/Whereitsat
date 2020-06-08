@@ -1,14 +1,10 @@
-const buttonElem = document.querySelector('#submit');
+const buttonElem = document.querySelector('#loginButton');
 const inputUser = document.querySelector('#username');
-const inputPass = document.querySelector('#pass');
+const inputPass = document.querySelector('#password');
 
 
 async function saveToken(token) {
-    //return new Promise((resolve, reject) => {
-        sessionStorage.setItem('auth', token);
-
-        //resolve('Done');
-    //})
+    sessionStorage.setItem('auth', token);
 }
 
 function getToken() {
@@ -21,13 +17,14 @@ async function login(username, password) {
         username: username,
         password: password
     }
-
-    const response = await fetch(url, { 
-        method: 'POST', 
-        body: JSON.stringify(obj), 
-        headers: { 'Content-Type': 'application/json' } });
+    console.log("Staff.js, username and password recieved ", obj );
+    
+    const response = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: { 'Content-Type': 'application/json' }
+    });
     const data = await response.json();
-
     return await data;
 }
 
@@ -35,16 +32,16 @@ async function isLoggedIn() {
     const token = getToken();
     const url = 'http://localhost:8000/whereitsat/auth/isloggedin';
 
-    const response = await fetch(url, { 
+    const response = await fetch(url, {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + token
-        } 
+        }
     });
     const data = await response.json();
 
     if (data.isLoggedIn) {
-        location.href = 'http://localhost:8000/loggedin.html';
+        location.href = 'http://localhost:8000/verify.html';
     }
 }
 
@@ -57,7 +54,7 @@ buttonElem.addEventListener('click', async () => {
     if (loggedIn.success) {
         saveToken(loggedIn.token);
         setTimeout(() => {
-            location.href = 'http://localhost:8000/loggedin.html'
+            location.href = 'http://localhost:8000/verify.html'
         }, 100);
     } else {
         document.querySelector('#errorMessage').classList.toggle('hide');

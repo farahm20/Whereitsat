@@ -11,6 +11,12 @@
       "username": "admin",
       "password": "$2b$10$aYg6442lekjJIX6LC6paS..IyA9yBep18igvPIQ1e42uWwerUCKNi",
       "role": "user"
+    },
+    {
+      "uuid": "0032efcb-7136-48db-b437-03c80416eab3",
+      "username": "farah",
+      "password": "$2b$10$jtzKX5Iva/GxP8Jizt0TGe/q1i7ieIa9TqX7FKRB5TmVQ2rVYptxm",
+      "role": "user"
     }
   ]
 }

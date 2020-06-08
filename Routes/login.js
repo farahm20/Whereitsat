@@ -7,16 +7,18 @@ const { matchPassword } = require('../models/hashPassword');
 
 router.post('/login', async (req, res) => {
     const body = req.body;
-    console.log(body);
+    console.log(" In login.js--post login: " ,body);
 
     let resObj = {
         success: false
     }
 
     const user = await getUserFromUsername(body);
-    console.log(user);
+    console.log("Login.js- getUserFromUserName:  ", user);
+
     const isAMatch = await matchPassword(body.password, user.password);
     console.log('isAMatch: ', isAMatch);
+    
     if (user && isAMatch) {
         const token = jwt.sign({ uuid: user.uuid }, 'a1b1c1', {
             expiresIn: 600 //Expires in 10 min

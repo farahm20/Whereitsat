@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = new Router();
 
-const { initiateDatabase, getEvents, addEvent } = require('../models/database-operations');
-
+const { initiateDatabase, getEvents, createEvent } = require('../models/database-operations');
+console.log("ADMIN.JS IS BEING USED/n/n");
 router.post('/whereitsat/createEvent', async (req, res) => {
     initiateDatabase();
     const event = req.body;
