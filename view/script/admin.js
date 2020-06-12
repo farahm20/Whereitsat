@@ -1,4 +1,9 @@
+const logoutButton = document.querySelector('#logoutButton');
 
+logoutButton.addEventListener('click', () => {
+    sessionStorage.removeItem('auth');
+    location.href = '/';
+});
 
 async function getEvent() {
     const url = 'http://localhost:8000/whereitsat/getEvents';

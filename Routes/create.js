@@ -7,15 +7,15 @@ const { addUser } = require('../models/database-functions');
 const { hashPassword } = require('../models/hashPassword');
 
 /*
-    1. Ta emot användarnamn och lösenord i body
-    2. Hasha lösenord med bcrypt
-    3. Generera uuid
-    4. Lägg till användare i databasen
-    5. Signera JWT token
-    6. Skicka tillbaka token till klienten
+    1. Receive username and password in body
+     2. Hasha password with bcrypt
+     3. Generate uuid
+     4. Add users to the database
+     5. Sign the JWT token
+     6. Send the token back to the client
 */
 
-//Endpoint för skapa konto
+//Endpoint for creating account
 router.post('/', async (req, res) => {
     let body = req.body;
 
@@ -23,10 +23,10 @@ router.post('/', async (req, res) => {
         success: false
     }
 
-    //Hasha lösenord och spara i en variabel
+    // hash password and save it in a variable
     const passwordHash = await hashPassword(body.password);
     console.log(passwordHash);
-    //Lägg till användare i databasen med användarnamn och de hashade lösenordet
+    // Add users to the database with usernames and the hash password
     const uuid = uuidv4();
     const userCreated = await addUser(uuid, body.username, passwordHash);
 

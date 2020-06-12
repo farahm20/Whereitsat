@@ -4,11 +4,7 @@ const inputPass = document.querySelector('#pass');
 
 
 async function saveToken(token) {
-    //return new Promise((resolve, reject) => {
         sessionStorage.setItem('auth', token);
-
-        //resolve('Done');
-    //})
 }
 
 function getToken() {
@@ -16,7 +12,7 @@ function getToken() {
 }
 
 async function login(username, password) {
-    const url = 'http://localhost:8000/login';
+    const url = 'http://localhost:8000/whereitsat/auth/login';
     const obj = {
         username: username,
         password: password
@@ -44,7 +40,7 @@ async function isLoggedIn() {
     const data = await response.json();
 
     if (data.isLoggedIn) {
-        location.href = 'http://localhost:8000/loggedin.html';
+        location.href = 'http://localhost:8000/verify.html';
     }
 }
 
@@ -57,7 +53,7 @@ buttonElem.addEventListener('click', async () => {
     if (loggedIn.success) {
         saveToken(loggedIn.token);
         setTimeout(() => {
-            location.href = 'http://localhost:8000/loggedin.html'
+            location.href = 'http://localhost:8000/verify.html'
         }, 100);
     } else {
         document.querySelector('#errorMessage').classList.toggle('hide');

@@ -26,7 +26,6 @@ router.post('/login', async (req, res) => {
         resObj.success = true;
         resObj.token = token;
     }
-
     res.send(JSON.stringify(resObj));
 });
 
@@ -45,7 +44,6 @@ router.get('/isloggedin', async (req, res) => {
             resObj.user = user;
         }
     }
-
     res.send(JSON.stringify(resObj));
 });
 

@@ -551,11 +551,18 @@ transform: rotate(-90deg);
     color: rgba(0, 0, 0, 0.6);
 }
 
-.loginPageButton {
+.loginPageButton, .logout {
        /* right: 44px; */
        position: relative;
        left: 154px;
        top: 4px;
+       
+       font-family: Fira Mono;
+       font-style: normal;
+       font-weight: bold;
+       font-size: 18px;
+       line-height: 26px;
+
        background-color: #272250;
        color: white;
        border: white;
@@ -565,6 +572,7 @@ transform: rotate(-90deg);
        text-decoration: none;
        display: inline-block;
        font-size: 15px;
+       letter-spacing: 0.3em;
        margin: 1px 0;
        transition-duration: 0.4s;
        cursor: pointer;
@@ -662,7 +670,7 @@ button a {
     /* align-items: center; */
     /* text-align: center; */
     letter-spacing: 0.3em;
-    color: #090911;
+    color: black;
     text-decoration: none;
 }
 
@@ -692,9 +700,7 @@ button a {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: 0.3em;
-    
-    
+    letter-spacing: 0.3em; 
   }
   
   #loginButton, #verifyButton{
@@ -714,6 +720,13 @@ button a {
     font-size: 20px;
     line-height: 26px;
     /* text-align: center; */
+  }
+
+  .logout{
+    left: 670px;
+    width: 100px;
+    color: white;
+
   }
 
   .logoutButton {
